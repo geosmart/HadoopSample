@@ -8,6 +8,10 @@ import org.apache.hadoop.io.*;
 import org.apache.hadoop.mapred.*;
 import org.apache.hadoop.util.*;
 
+/**
+ * Sample from  http://hadoop.apache.org/docs/r1.2.1/mapred_tutorial.html#Purpose
+ * Example: WordCount v1.0
+ */
 public class WordCount {
           public static class Map extends MapReduceBase implements Mapper<LongWritable, Text, Text, IntWritable> {
           private final static IntWritable one = new IntWritable(1);
@@ -49,6 +53,11 @@ public class WordCount {
 	      conf.setCombinerClass(Reduce.class);
 	      conf.setReducerClass(Reduce.class);
 	
+	      /*
+	       * How to Read calculate data and Write result.
+	       * Here, use text way that read calculate data from HDFS and then write result
+	       * back to HDFS
+	       */
 	      conf.setInputFormat(TextInputFormat.class);
 	      conf.setOutputFormat(TextOutputFormat.class);
 	
