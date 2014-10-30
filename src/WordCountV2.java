@@ -121,7 +121,7 @@ public class WordCountV2 extends Configured implements Tool {
 
       FileInputFormat.setInputPaths(conf, new Path(other_args.get(0)));
       FileOutputFormat.setOutputPath(conf, new Path(other_args.get(1)));
-
+      
       JobClient.runJob(conf);
       return 0;
     }

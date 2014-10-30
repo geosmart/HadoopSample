@@ -37,8 +37,8 @@ import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
 
 /**
-* This counts the occurrences of words in ColumnFamily "input_words", that has a single column (that we care about)
-* containing a sequence of words.
+* This counts the occurrences of words in ColumnFamily "input_words", 
+* that has a single column (that we care about) containing a sequence of words.
 *
 * For each word, we output the total number of occurrences across all texts.
 *

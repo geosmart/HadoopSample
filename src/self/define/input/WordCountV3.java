@@ -1,3 +1,4 @@
+package self.define.input;
 
 import java.io.IOException;
 import java.util.*;
@@ -8,11 +9,13 @@ import org.apache.hadoop.io.*;
 import org.apache.hadoop.mapred.*;
 import org.apache.hadoop.util.*;
 
+import copy.from.textinputformat.MyTextInputFormat;
+
 /**
  * Sample from  http://hadoop.apache.org/docs/r1.2.1/mapred_tutorial.html#Purpose
  * Example: WordCount v1.0
  */
-public class WordCount {
+public class WordCountV3 {
           public static class Map extends MapReduceBase implements Mapper<LongWritable, Text, Text, IntWritable> {
           private final static IntWritable one = new IntWritable(1);
 	      private Text word = new Text();
@@ -38,7 +41,7 @@ public class WordCount {
 	    }
 	
 	    public static void main(String[] args) throws Exception {
-	      JobConf conf = new JobConf(WordCount.class);
+	      JobConf conf = new JobConf(WordCountV3.class);
 	      conf.setJobName("wordcount");
 	
 	      conf.setOutputKeyClass(Text.class);
@@ -58,7 +61,8 @@ public class WordCount {
 	       * Here, use text way that read calculate data from HDFS and then write result
 	       * back to HDFS
 	       */
-	      conf.setInputFormat(TextInputFormat.class);
+	      //conf.setInputFormat(MyTextInputFormat.class);
+	      conf.setInputFormat(MyInputFormat.class);
 	      conf.setOutputFormat(TextOutputFormat.class);
 	 
 	      FileInputFormat.setInputPaths(conf, new Path(args[0]));
