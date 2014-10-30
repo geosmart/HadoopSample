@@ -30,10 +30,10 @@
 	RecordReader: Implementation of RecordReader will read data for Map based on InputSplit that transformed in.
 	<b>note</b> </br>
 	In package "copy.from.textinputformat", it's only a copy for textinputformat and relative class. use these class to understand the logical flow of how to spilt data from cluster and how to read data form cluster </br>
-	MyFileInputFormat --> FileInputFormat</br>
-	MyFileSplit --> FileSplit</br>
-	MyLineRecordReader --> LineRecordReader</br>
-	MyTextInputFormat --> TextInputFormat</br>
+	MyFileInputFormat --> FileInputFormat </br>
+	MyFileSplit --> FileSplit </br>
+	MyLineRecordReader --> LineRecordReader </br>
+	MyTextInputFormat --> TextInputFormat </br>
     <b> You must have already found that the type of two params that is as input of the function of next in RecordReader is same as the type of the first two parameters of Map function in Map class </b></br>
     next(<b>LongWritable putKeyIn, Text putValueIn</b>) <===> map(<b>LongWritable key, Text value</b>, OutputCollector<Text, IntWritable> output, Reporter reporter)</br>
 	
