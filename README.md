@@ -22,16 +22,16 @@
 <b>WordCountV3</b>
 	Get map input from a String Array. this demo show you how to write input object for map process.<br>  
 	<i><b>"data:"</b></i> Directly get data from self define string array, see more detail refer to MyRecordReader.java <br>
-	1: run WordCount MapReduce: hadoop jar YourExportJarFileName.jar self.define.input.WordCountV3 /test/input /test/output<br>
+	1: run WordCount MapReduce: hadoop jar YourExportJarFileName.jar self.define.input.WordCountV3 /test/input /test/output <br>
 	<i>"note:"</i> the output directory <b>do not</b> exist in HDFS!!!	<br>
 	<b>summarise</b> <br>
 	InputFormat: Hadoop MapReduce calculate framwork get implementation object of InputSplit/RecordReader <br>
 	InputSplit: Implementation of InputSplit is used to store matedata of data that need to be transformed to RecordReader <br>
-	RecordReader: Implementation of RecordReader will read data for Map based on InputSplit that transformed in.
+	RecordReader: Implementation of RecordReader will read data for Map based on InputSplit that transformed in. <br>
 	<b>note</b> <br>
 	In package "copy.from.textinputformat", it's only a copy for textinputformat and relative class. use these class to understand the logical flow of how to spilt data from cluster and how to read data form cluster <br>
 	MyFileInputFormat --> FileInputFormat <br>
-	MyFileSplit --> FileSplit <br>
+	MyFileSplit --> FileSplit (FileSplit numbers == Map execution times)<br>
 	MyLineRecordReader --> LineRecordReader <br>
 	MyTextInputFormat --> TextInputFormat <br>
     <b> You must have already found that the type of two params that is as input of the function of next in RecordReader is same as the type of the first two parameters of Map function in Map class </b><br>

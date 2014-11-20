@@ -12,7 +12,11 @@ import org.apache.hadoop.mapred.InputSplit;
 import org.apache.hadoop.mapred.JobConf;
 import org.apache.hadoop.mapred.RecordReader;
 import org.apache.hadoop.mapred.Reporter;
-
+/**
+ * 1. Split the data depend on location, get matedata of the data and then store in InputSplit
+ * 2. Hadoop will sent inputSplit to machine that match the matedata of inpuSpit stored.
+ * 3. Hadoop MR get calcuate data from  RecordReader  
+ */
 public class MyInputFormat implements InputFormat<LongWritable, Text> {
 
 	private static final Log LOG = LogFactory.getLog(MyInputFormat.class);

@@ -86,7 +86,7 @@ public class WordCountV2 extends Configured implements Tool {
     }
 
     public int run(String[] args) throws Exception {
-      JobConf conf = new JobConf(getConf(), WordCount.class);
+      JobConf conf = new JobConf(getConf(), WordCountV2.class);
       conf.setJobName("wordcountv2");
 
       conf.setOutputKeyClass(Text.class);
@@ -94,17 +94,16 @@ public class WordCountV2 extends Configured implements Tool {
 
       conf.setMapperClass(Map.class);
       /*
-       * Users can optionally specify a combinervia JobConf.setCombinerClass(Class), 
+       * Users can optionally specify a combiner via JobConf.setCombinerClass(Class), 
        * to perform local aggregation of the intermediate outputs, 
        * which helps to cut down the amount of data transferred from the Mapper to the Reducer.
        */
       conf.setCombinerClass(Reduce.class);
       conf.setReducerClass(Reduce.class);
-
       /*
        * How to Read calculate data and Write result.
-       * Here, use text way that read calculate data from HDFS and then write result
-       * back to HDFS
+       * Here, use text way that read calculate data from HDFS 
+       * and then write result back to HDFS
        */
       conf.setInputFormat(TextInputFormat.class);
       conf.setOutputFormat(TextOutputFormat.class);

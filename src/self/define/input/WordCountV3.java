@@ -49,7 +49,7 @@ public class WordCountV3 {
 	
 	      conf.setMapperClass(Map.class);
 	      /*
-	       * Users can optionally specify a combinervia JobConf.setCombinerClass(Class), 
+	       * Users can optionally specify a combiner via JobConf.setCombinerClass(Class), 
 	       * to perform local aggregation of the intermediate outputs, 
 	       * which helps to cut down the amount of data transferred from the Mapper to the Reducer.
 	       */
