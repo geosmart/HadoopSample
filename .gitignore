@@ -3,9 +3,7 @@
 ###############
 *.class
 *.bak
-*.log
-.classpath
-.project
+*.log  
 
 ###############
 #    folder   #
@@ -13,3 +11,4 @@
 .settings/
 target/
 bin/
+/bin

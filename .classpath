@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry excluding="testdata/WorldCount/|testdata/WorldCountV2/|testdata/" kind="src" path="src/main/resources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/ActiveMQ/activemq-core-5.7.0.jar"/>
+	<classpathentry kind="lib" path="lib/ActiveMQ/geronimo-j2ee-management_1.1_spec-1.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/ActiveMQ/geronimo-jms_1.1_spec-1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/common/commons-logging-1.1.jar"/>
+	<classpathentry kind="lib" path="lib/common/commons-logging-api-1.1.jar"/>
+	<classpathentry kind="lib" path="lib/common/hadoop-common-2.2.0.jar"/>
+	<classpathentry kind="lib" path="lib/mapreduce/hadoop-core-1.0.4.8.jar"/>
+	<classpathentry kind="lib" path="lib/mapreduce/hadoop-mapreduce-client-core-2.2.0.jar"/>
+	<classpathentry kind="lib" path="lib/cassandra/apache-cassandra-2.0.2.jar"/>
+	<classpathentry kind="lib" path="lib/cassandra/apache-cassandra-clientutil-2.0.2.jar"/>
+	<classpathentry kind="lib" path="lib/cassandra/apache-cassandra-thrift-2.0.2.jar"/>
+	<classpathentry kind="lib" path="lib/cassandra/cassandra-all-1.2.11.2.jar"/>
+	<classpathentry kind="lib" path="lib/cassandra/cassandra-thrift-1.2.11.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
